@@ -1,0 +1,24 @@
+<div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
+  <div>
+    <mat-form-field class="example-full-width">
+      <input [(ngModel)]="searchString" matInput placeholder="Search:">
+    </mat-form-field>
+  </div>
+  <div fxLayoutAlign="start start" fxFlexFill>
+    <mat-form-field>
+      <mat-label>Sort By:</mat-label>
+      <mat-select [(ngModel)]="sortBy" value="16px">
+        <mat-option value="species-ascending">Species</mat-option>
+        <mat-option value="weight-descending">Weight Descending</mat-option>
+        <mat-option value="weight-ascending">Weight Ascending</mat-option>
+        <mat-option value="date-descending">Date Descending</mat-option>
+        <mat-option value="date-ascending">Date Ascending</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div fxLayout="row" fxFlexFill fxLayoutGap="10px grid" fxLayout="row wrap'">
+    <div *ngFor="let record of fishRecords | filter : searchString | sort : sortBy" fxFlex="33">
+      <app-record [record]="record"></app-record>
+    </div>
+  </div>
+</div>
