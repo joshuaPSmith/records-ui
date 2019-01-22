@@ -18,7 +18,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomePage } from './pages/home/home.page';
 import { AboutPage } from './pages/about/about.page';
 import { RecordComponent } from './components/record/record.component';
-import { MapPage } from './pages/map/map.page';
+import { MapPageComponent } from './pages/map/map.page';
 import { GoogleMapsAPIKey } from 'src/app-env';
 
 @NgModule({
@@ -29,7 +29,7 @@ import { GoogleMapsAPIKey } from 'src/app-env';
     FooterComponent,
     HomePage,
     AboutPage,
-    MapPage,
+    MapPageComponent,
     FilterPipe,
     PoundFormaterPipe,
     SortPipe

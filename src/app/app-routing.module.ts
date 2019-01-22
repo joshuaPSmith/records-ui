@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomePage } from './pages/home/home.page';
 import { AboutPage } from './pages/about/about.page';
-import { MapPage } from './pages/map/map.page';
+import { MapPageComponent } from './pages/map/map.page';
 
 const routes: Routes = [
   {
@@ -13,10 +13,11 @@ const routes: Routes = [
     path: 'about',
     component: AboutPage
   },
-  {
-    path: 'map',
-    component: MapPage
-  }
+  // TODO: Add map once I can show pins for catches
+  // {
+  //   path: 'map',
+  //   component: MapPageComponent
+  // }
 ];
 
 @NgModule({

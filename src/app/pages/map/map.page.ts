@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './map.page.html',
   styleUrls: ['./map.page.scss']
 })
-export class MapPage {
+export class MapPageComponent {
   // google maps zoom level
   zoom = 7;
 
@@ -14,24 +14,24 @@ export class MapPage {
   lng = -82.706189;
 
   markers: IMarker[] = [
-	  {
-		  lat: 28.340356,
-		  lng: -82.706189,
-		  label: 'A',
-		  draggable: false
-	 s },
-	  {
-		  lat: 51.373858,
-		  lng: 7.215982,
-		  label: 'B',
-		  draggable: false
-	  },
-	  {
-		  lat: 51.723858,
-		  lng: 7.895982,
-		  label: 'C',
-		  draggable: true
-	  }
+    {
+      lat: 28.340356,
+      lng: -82.706189,
+      label: 'A',
+      draggable: false
+    }
+    // {
+    //   lat: 51.373858,
+    //   lng: 7.215982,
+    //   label: 'B',
+    //   draggable: false
+    // },
+    // {
+    //   lat: 51.723858,
+    //   lng: 7.895982,
+    //   label: 'C',
+    //   draggable: true
+    // }
   ];
 
   clickedMarker(label: string, index: number) {
